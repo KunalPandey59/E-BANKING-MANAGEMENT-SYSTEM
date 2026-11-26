@@ -1,0 +1,131 @@
+<html>
+<body>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f6fa;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+ background-color:#03045e;
+ color: #fff;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding:5px;    
+}
+.navbar-brand .navbar-logo {
+ font-size:25px;
+ color: #fff;
+ text-decoration: none;
+ font-weight: bold;
+ padding-left: 50px;
+}
+.navbar-brand .navbar-logo span{
+color:#00b4d8;
+}
+.navbar-menu {
+ list-style: none;
+ display: flex;
+}
+.navbar-item {
+ margin-left: 30px;
+}
+
+.navbar-item a {
+ color: #fff;
+ text-decoration: none;
+ font-weight: 500;
+ font-size:15px;
+}
+
+.navbar-item a:hover {
+ color: #90e0ef;
+ text-decoration: underline;
+}
+.container {
+  width: 90%;
+  margin: 40px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background-color: #3498db;
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="home" class="navbar-logo">TECH <span>BANK</span></a>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="home">Home</a></li>
+                
+                <li class="navbar-item"><a href="showadminpage">Back</a></li>
+            </ul>
+        </nav>
+    </header>
+        <table border="solid">
+            <tr>
+                <td>Full Name</td>
+                <td>User Name</td>
+                <td>Email</td>
+                <td>Phone Number</td>
+                <td>Password</td>
+                <td>Confirm Number</td>
+                <td>DOB</td>
+                <td>Address</td>
+                <td>City</td>
+                <td>State</td>
+                <td>Zip</td>
+            </tr>
+            {% for i in r %}
+            <tr>
+                <td>{{i.fullname}}</td>
+                <td>{{i.username}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.Phno}}</td>
+                <td>{{i.Password}}</td>
+                <td>{{i.cmPassword}}</td>
+                <td>{{i.DOB}}</td>
+                <td>{{i.address}}</td>
+                <td>{{i.city}}</td>
+                <td>{{i.state}}</td>
+                <td>{{i.zip}}</td>
+                <td><a href="user_dele/{{i.id}}">Delete</a></td>
+
+            
+            </tr>
+            {% endfor %}
+        
+        </table>
+    </body>
+</html>

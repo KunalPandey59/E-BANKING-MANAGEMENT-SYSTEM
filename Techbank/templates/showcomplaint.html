@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>User Name</td>
+                <td>Account Type</td>
+                <td>Phone Number</td>
+                <td>Email</td>
+                <td>Inbox</td>
+            </tr>
+            {% for i in c %}
+            <tr>
+                <td>{{i.Name}}</td>
+                <td>{{i.Username}}</td>
+                <td>{{i.Account_Type}}</td>
+                <td>{{i.Phno}}</td>
+                <td>{{i.Email}}</td>
+                <td>{{i.Inbox}}</td>
+                
+            </tr>
+            {% endfor %}
+        
+        </table>
+    </body>
+</html>

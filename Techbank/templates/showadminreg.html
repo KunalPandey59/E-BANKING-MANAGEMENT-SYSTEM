@@ -1,0 +1,186 @@
+<html>
+    <body> <head>
+            <style>
+				body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .navbar {
+                    background-color:#03045e;
+                    color: #fff;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding:5px;    
+                }
+
+                .navbar-brand .navbar-logo {
+                    font-size:25px;
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: bold;
+                    padding-left: 50px;
+                }
+
+                .navbar-brand .navbar-logo span{
+                    color:#00b4d8;
+                }
+                .navbar-menu {
+                    list-style: none;
+                    display: flex;
+                }
+
+                .navbar-item {
+                    margin-left: 30px;
+                }
+
+                .navbar-item a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size:15px;
+                }
+
+                .navbar-item a:hover {
+                    color: #90e0ef;
+                    text-decoration: underline;
+                }
+                footer {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    justify-content: center;
+                    background-color:#03045e;
+                    color: #fff;
+                    text-align: center;
+                    width: 100%;
+                }
+                .footer1 a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size:10px;
+                    font-weight:500;
+                    padding: 20px 20px;
+                }
+
+                .footer2 span {
+                    color: #fff;
+                    font-size:20px;
+                    font-weight:500;
+                    text-decoration: none;
+                    padding-top:20px ;
+                }
+
+                main {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 4em;
+                    background-color: lightblue;
+                    color: #2c2929;
+                }
+                .dashboard {
+                    background-color: #f7f7f7;
+                    padding: 4em;
+                    border: 1px solid #ddd;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+                }
+
+                .stats {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                }
+
+                .stat {
+                    background-color: #fff;
+                    padding: 12px;
+    
+                }
+                
+                .transactions{
+                    background-color: #f7f7f7;
+                    padding: 2em;
+                    border: 1px solid #ddd;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    width: 1000px;
+                    margin: 1.2rem;
+                }
+                .showtransactions{
+                    background-color: #f7f7f7;
+                    padding: 2em;
+                    border: 1px solid #ddd;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    width: 1000px;
+                    margin: 1.2rem;
+                }
+                .usercomplaint{
+                    background-color: #f7f7f7;
+                    padding: 2em;
+                    border: 1px solid #ddd;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    width: 1000px;
+                    margin: 1.2rem;
+                }
+			</style>
+        </head>
+        <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="home" class="navbar-logo">TECH <span>BANK</span></a>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="home">Home</a></li>
+                <li class="navbar-item"><a href="userlogin">Sign In</a></li>
+                <li class="navbar-item"><a href="#"></a></li>
+            </ul>
+        </nav>
+        </header>
+        <table >
+            <tr>
+                <td>Admin Name</td>
+                <td>Admin Name</td>
+                <td>Admin Email</td>
+                <td>Phone Number</td>
+                <td>Password</td>
+                <td>Confirm Number</td>
+                <td>DOB</td>
+                <td>Address</td>
+                <td>City</td>
+                <td>State</td>
+                <td>Zip</td>
+            </tr>
+            {% for i in A %}
+            <tr>
+                <td>{{i.Admin_name}}</td>
+                <td>{{i.Admin_name}}</td>
+                <td>{{i.Admin_email}}</td>
+                <td>{{i.Phno}}</td>
+                <td>{{i.Password}}</td>
+                <td>{{i.cmPassword}}</td>
+                <td>{{i.DOB}}</td>
+                <td>{{i.address}}</td>
+                <td>{{i.city}}</td>
+                <td>{{i.state}}</td>
+                <td>{{i.zip}}</td>
+                <td><a href="admin_dele/{{i.id}}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        
+        </table>
+        <footer>
+
+            <div class="footer2">
+            <span>Created by <a>TECH BANK</a> | 2025 All rights reserved.</span>
+            </div>
+        </footer>
+    
+    </body>
+</html>
