@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'home.css' %}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tech Bank</title>
+    </head>
+    
+<body>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="home" class="navbar-logo">TECH <span>BANK</span></a>
+            </div>
+                <ul class="navbar-menu">
+                    <li class="navbar-item"><a href="home">Home</a></li>
+                    <li class="navbar-item"><a href="#first">About Us</a></li>
+                    <li class="navbar-item"><a href="#faq">FAQ</a></li>
+                    <li class="navbar-item"><a href="contact_us">Get In Touch</a></li>
+                    <li class="navbar-item"><a href="usercomplaint">Complaint Management</a></li>
+                    <!-- <button><li class="navbar-item"><a href="userlogin">User Sign In</a></li></button> -->
+                    <button type="button"class="navbar-item"><a href="adminlogin">Admin</a></button>
+                </ul>
+        </nav>
+    
+        <div class="main">
+            <div class="hero">
+                <h1>Tech<span>Bank</span></h1>
+                <h2>"We are Connecting Peoples From All Over India."</h2><span>
+                    Your Multi-Currency Payments, Global Settlements, Currency Exchange, &amp; other needs can be solved by a few lines of code, <br>allowing you to invest valuable time to further expand your business.
+                </span>
+                <div class="btn">
+                    <button type="button" class="login"><a href="userlogin">login</a></button>
+                    <button type="button"  class="Signup"><a href="Reg">Signup</a></button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+         <h1>About Us</h1>
+        <div class="about" id="first">
+        <section class="first">
+            <div>
+                <span>Our Mission</span>
+             <p>To provide suprior pro active survice to niche markets globally by providing cost affective responsive service to others in our role as developmentb bank and in doing so need the requirements of our stack holders.</p>
+            </div>
+            <div class="secimg">
+                <img src="{% static 'image/mission.jpg' %}" alt="">
+            </div>
+    
+        </section>
+    
+        <section class="first">
+            <div class="secimg">
+                <img src="{% static 'image/vision.jpg' %}" alt="">
+            </div> 
+            <div>
+                <span>Our Vision</span>
+             <p>To became the bank of choice for corporates medium business and up markets and retail customers and devlpomental banking for small business, mass markets and jewllers market.</p>
+            </div>
+        </section>
+        </div>
+    
+    
+        <div class="about">
+        <section class="first">
+            <div>
+                <span>Our Presence</span>
+             <p>While firmly adhering to a policy of prudence and caution, the Bank has been in the forefront of introducing various innovative services and systems. Business has been conducted with the successful blend of traditional values and ethics and the most modern infrastructure.</p>
+            </div>
+            <div class="secimg">
+                <img src="{% static 'image/presence.jpg'%}" alt="">
+                
+            </div>
+    
+        </section>
+    
+        <section class="first">
+            <div class="secimg">
+                <img src="{% static 'image/history.jpg' %}" alt="">
+                
+            </div>
+            <div>
+                <span>Our History</span>
+             <p>Bank of Kolkata was founded on 3rd June, 2024 by a group of eminent coders from Kolkata. The Bank was under private ownership and control till June when it was nationalised along with the organisation</p>
+            </div>
+            
+    
+        </section>
+        </div>
+    
+    
+    
+        <section class="faq" id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faqbox">
+                <span>Types of Accounts</span>
+                
+                    
+            </div>
+    
+            <div class="faqbox">
+                <span>Insurance Policy</span>
+
+                    
+            </div>
+          
+            <div class="faqbox">
+                <span>Passbook issue</span>
+                
+                    
+            </div>
+         
+            <div class="faqbox">
+                <span>Card Facilities</span>
+
+                    
+            </div>
+    
+            <div class="faqbox">
+                <span>loan Policy</span>
+
+            </div>
+    
+            <div class="faqbox">
+                <span>Customer Helpline</span>
+
+                    
+            </div>
+     
+        </section>
+
+        </body>
+    
+        <footer>
+
+            <div class="footer2">
+            <span>Created by <a>TECH BANK</a> | 2025 All rights reserved.</span>
+            </div>
+        </footer>
+    
+    
+
+        
+        
+</html>
